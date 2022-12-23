@@ -5,11 +5,11 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:get_it/get_it.dart' as _i1;
-import 'package:injectable/injectable.dart' as _i2;
 import 'package:flutter_envied_injectable/env/env.dart' as _i3;
 import 'package:flutter_envied_injectable/env/env_dev.dart' as _i5;
 import 'package:flutter_envied_injectable/env/env_prod.dart' as _i4;
+import 'package:get_it/get_it.dart' as _i1;
+import 'package:injectable/injectable.dart' as _i2;
 
 const String _prod = 'prod';
 const String _dev = 'dev';
