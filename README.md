@@ -6,7 +6,7 @@ Better and automated .env integration in multiple environments example with ENVi
 
 ## Usage
 
-**Running the example**
+**Running the example:**
 
 Get packages:
 
@@ -26,9 +26,9 @@ Run the example:
 flutter run
 ```
 
-**==After changing .env files:==**
+**After changing .env files:**
 
-ENVied generator doesn't pick up the changes to .env files on its own. You have to ==change something== in the corresponding ==env_dev.dart/env_prod.dart== for envied_generator to pick up changes for this file. Changing anything in a comment (a simple letter) seems sufficient. I haven't opened an issue (yet).
+ENVied **generator doesn't pick up the changes** to .env files on its own. You have to **change something** in the corresponding `env_dev.dart/env_prod.dart` for `envied_generator` to pick up changes for this file. Changing anything in a comment (a simple letter) seems sufficient. I haven't opened an issue (yet).
 
 Then you rebuild the files again:
 
@@ -50,7 +50,7 @@ I am using `bool const kDebugMode` the determine which version of the app (`debu
 configureDependencies(environment: kDebugMode ? dev : prod);
 ```
 
-The environment for [injectable](https://pub.dev/packages/injectable) is set according to `kDebugMode`, so `dev` for `debug/profile` and `prod` for `release`. This telles injectable to only load one of the `Env` classes (`EnvDev/EnvProd`) and inject it as `Env` via [GetIt](https://pub.dev/packages/get_it).
+The `environment` for [injectable](https://pub.dev/packages/injectable) is set according to `kDebugMode`, so `dev` for `debug/profile` and `prod` for `release`. This telles injectable to only load one of the `Env` classes (`EnvDev/EnvProd`) and inject it as `Env` via [GetIt](https://pub.dev/packages/get_it).
 
 ```dart
 class EnvDev extends Env {
@@ -77,7 +77,7 @@ print(getIt<Env>().title);
 
 Put together makes `title` either `DEV_Title from .env.dev` or `Production_Title from .env.prod` depending on the environment you've build for. Available in your Classes/Widgets.
 
-Magic!
+**Magic!**
 
 ---
 
